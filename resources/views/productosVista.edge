@@ -1,6 +1,7 @@
 <table class="table">
     <thead>
       <tr>
+        <th>id</th>
         <th scope="col">nombre</th>
         <th scope="col">descripcion</th>
         <th scope="col">codigo</th>
@@ -13,6 +14,7 @@
     <tbody>
         @each(producto in productos)
             <tr>
+                <td>{{producto.id}}</td>
                 <td>{{producto.nombre}} </td>
                 <td>{{producto.descripcion}} </td>
                 <td>{{producto.codigo}} </td>
@@ -23,3 +25,10 @@
         @endeach  
     </tbody>
   </table>
+
+  <style>
+    .table{
+      border: black solid
+    }
+    
+  </style>

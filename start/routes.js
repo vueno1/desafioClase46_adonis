@@ -1,7 +1,5 @@
 'use strict'
 
-const getProductosController = require('../app/controllers/http/getProductosController')
-
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -20,5 +18,10 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 
+
+Route.resource("productos", "getProductosController").apiOnly
 //en la ruta "productos" me retorna todos los productos
-Route.get("productos", "getProductosController.index")
+//pero para eso estan los controladores y aqui solo los definiremos. 
+//como por ejemplo: "getProductosControllers.index"
+//index es el metodo para traerme todos los productos.
+// Route.get("productos", "getProductosController.index")
